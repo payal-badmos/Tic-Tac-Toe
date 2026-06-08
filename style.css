@@ -2,17 +2,34 @@
     margin: 0;
     padding: 0;
 }
+h1 {
+    color: white;
+
+    text-shadow:
+        0 0 10px #c084fc,
+        0 0 20px #9333ea,
+        0 0 40px #9333ea;
+}
 
 body {
     text-align: center;
     font-size: 4vmin;
-    background-color:#2e1065 ;
     color: white;
+    background-image:
+        linear-gradient(
+            rgba(46, 16, 101, 0.7),
+            rgba(46, 16, 101, 0.7)
+        ),
+        url("./background.jpg");
 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .container {
-    margin-top: 5vmin;
+    margin-top: 3vmin;
     justify-self: center;
 }
 
@@ -26,6 +43,14 @@ body {
     gap: 1.5vmin;
     position: relative;
     overflow: hidden;
+    border: 2px solid #9333ea;
+    border-radius: 4vmin;
+    padding: 2vmin;
+
+    box-shadow:
+        0 0 10px rgba(168,85,247,0.5),
+        0 0 25px rgba(168,85,247,0.5),
+        0 0 50px rgba(168,85,247,0.3);
 }
 
 .box {
@@ -37,6 +62,10 @@ body {
     background-color: hsl(290, 100%, 94%);
     color: #5100a2;
     box-shadow: 0 0 1rem rgba(168,85,247,0.3);
+    text-shadow:
+        0 0 5px #a855f7,
+        0 0 6px #a855f7,
+        0 0 7px #a855f7;
     transition: all 0.2s ease;
 }
 .button-container {
@@ -81,6 +110,12 @@ body {
 #msg {
     color: white;
     font-size: 5vmin;
+    font-weight:bold;
+
+    text-shadow:
+        0 0 5px #c084fc,
+        0 0 10px #c084fc,
+        0 0 40px #9333ea;
 }
 
 .msg-container {
@@ -212,27 +247,20 @@ body {
     rotate: -45deg;
 }
 
-/* #playerturn {
-    font-size: 4vmin;
-    margin-top: 2vmin;
-    font-weight: bold;
-    color: #b06bfa;
-
-} */
  #playerturn {
     display: inline-block;
     padding: 1rem 2rem;
-    background: #4c1d95;
+     background: #1a1a1a;
     border-radius: 30px;
     margin-top: 1rem;
     font-weight: bold;
     color: white;
-    box-shadow: 0 0 10px rgba(158, 80, 231, 0.4);
-    border:3px solid #5808b3;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
-    border: 2px solid #7900eaea;
-    background: #1a1a1a;
-    
+    box-shadow: 0 0 10px rgba(153, 71, 230, 0.4);
+    border:3px solid #5808b3; 
+    text-shadow:
+        0 0 10px #c084fc,
+        0 0 20px #9333ea,
+        0 0 40px #9333ea;
 }
 
 .scoreboard {
@@ -243,13 +271,15 @@ body {
 }
 
 .score-card {
-    background: #1a1a1a;
+    background: rgba(0,0,0,0.5);
     color: white;
     padding: 1rem 2rem;
     border-radius: 15px;
     min-width: 150px;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
-    border: 2px solid #7900eaea;
+    box-shadow:
+        0 0 20px rgba(168,85,247,0.4);
+    backdrop-filter: blur(8px);
+border: 2px solid #a855f7;
 }
 
 .score-card h3 {
@@ -265,5 +295,7 @@ body {
 footer {
     margin-top: 3rem;
     color: #e4e0e0;
-    font-size: 2vmin;
+    font-size: 3vmin;
 }
+
+

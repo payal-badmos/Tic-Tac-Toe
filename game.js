@@ -12,19 +12,8 @@ let oScore = 0;
 let xScore = 0;
 let drawScore = 0;
 let drawScoreText = document.querySelector("#draw-score");
-
 let turnO = true;
 let count = 0;
-// const winPatterns = [
-//   [0, 1, 2],
-//   [0, 3, 6],
-//   [0, 4, 8],
-//   [1, 4, 7],
-//   [2, 5, 8],
-//   [2, 4, 6],
-//   [3, 4, 5],
-//   [6, 7, 8]
-// ];
 let resetScore = document.querySelector("#resetScore");
 resetScore.addEventListener("click", () => {
   oScore = 0;
@@ -111,9 +100,9 @@ const checkwinner = () => {
 
       if (position1val === position2val && position2val === position3val) {
         // Highlight winning boxes
-        boxes[pattern.combo[0]].style.backgroundColor = "rgb(220, 107, 255)";
-        boxes[pattern.combo[1]].style.backgroundColor = "rgb(220, 107, 255)";
-        boxes[pattern.combo[2]].style.backgroundColor = "rgb(220, 107, 255)";
+        boxes[pattern.combo[0]].style.backgroundColor = "rgb(177, 94, 254)";
+        boxes[pattern.combo[1]].style.backgroundColor = "rgb(177, 94, 254)";
+        boxes[pattern.combo[2]].style.backgroundColor = "rgb(177, 94, 254)";
         strike.className = `strike-line ${pattern.className}`;
         setTimeout(() => {
 
@@ -133,3 +122,5 @@ const resetGame = () => {
 };
 newGame.addEventListener("click", resetGame);
 reset.addEventListener("click", resetGame);
+
+
