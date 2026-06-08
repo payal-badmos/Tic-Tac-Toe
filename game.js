@@ -85,11 +85,6 @@ const enableBoxes = () => {
     box.style.backgroundColor = "#ffffff";
   }
 };
-// const showWinner = (winner) => {
-//   msg.innerText = ` 🥳 Congratulations! , player ${winner} Wins!`;
-//   msgContainer.classList.remove("hide");
-//   disableBoxes();
-// };
 const showWinner = (winner) => {
 
   if (winner === "O") {
