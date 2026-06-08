@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="msg-container hide">
+        <p id="msg">Winner</p>
+        <div class="button-container">
+            <button id="newGame" class="button">New Game</button>
+            <button id="resetScore" class="button">Reset Score</button>
+        </div>
+    </div>
+    <h1>Tic Tac Toe</h1>
+    <p id="playerturn">Current Turn : Player O</p>
+    <!-- <div class="scoreboard">
+    <p>O : <span id="o-score">0</span></p>
+    <p>X : <span id="x-score">0</span></p> -->
+    <div class="scoreboard">
+        <div class="score-card">
+            <h3>Player O</h3>
+            <span id="o-score">0</span>
+        </div>
+
+        <div class="score-card">
+            <h3>Player X</h3>
+            <span id="x-score">0</span>
+        </div>
+        <div class="score-card">
+    <h3>Draws</h3>
+    <span id="draw-score">0</span>
+</div>
+    </div>
+    <div class="container">
+        <div class="game">
+            <div id="strike" class="strike-line"></div>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+            <button class="box"></button>
+        </div>
+    </div>
+
+    <button id="reset" class="button">Reset</button>
+    <footer>
+    Made by Palak ❤️
+</footer>
+    <script src="/game.js"></script>
+</body>
+
+</html>

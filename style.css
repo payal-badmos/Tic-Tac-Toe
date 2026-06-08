@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    text-align: center;
+    font-size: 4vmin;
+    background-color:#2e1065 ;
+    color: white;
+
+}
+
+.container {
+    margin-top: 5vmin;
+    justify-self: center;
+}
+
+.game {
+    height: 60vmin;
+    width: 60vmin;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5vmin;
+    position: relative;
+    overflow: hidden;
+}
+
+.box {
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 3vmin;
+    border: none;
+    font-size: 8vmin;
+    background-color: hsl(290, 100%, 94%);
+    color: #5100a2;
+    box-shadow: 0 0 1rem rgba(168,85,247,0.3);
+    transition: all 0.2s ease;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+
+.button{
+    margin-top: 4vmin;
+    height: 8vmin;
+    background-color: #7744ef;
+    color: white;
+    font-size: 5vmin;
+    border-radius: 1vmin;
+    border: none;
+    cursor: pointer;
+    border: 3px solid rgb(230, 215, 249);
+    transition: all 0.2s ease;
+}
+.button:hover {
+    transform: scale(1.05);
+    background-color: #8b5cf6;
+}
+#reset {
+    width: 20vmin;
+}
+
+#newGame {
+    width: 30vmin;
+    margin-right: 2vmin;
+}
+
+#resetScore {
+    width: 30vmin;
+    margin-right: 2vmin;
+}
+
+#msg {
+    color: white;
+    font-size: 5vmin;
+}
+
+.msg-container {
+    height: 100vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vmin;
+    flex-direction: column;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+}
+
+
+.hide {
+    display: none;
+}
+.box:hover {
+    transform: scale(1.05);
+    background-color: #d5adff;
+    cursor: pointer;
+}
+
+.strike-line {
+    position: absolute;
+    background-color: #7208c4;
+    border-radius: 1vmin;
+    z-index: 10;
+    display: none;
+    /* Hidden by default */
+    pointer-events: none;
+    /* Prevents line from blocking tile clicks */
+}
+
+@keyframes drawWidth {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes drawHeight {
+    from {
+        transform: scaleY(0);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+
+/* Horizontal Rows (Animate Width) */
+.strike-row-1,
+.strike-row-2,
+.strike-row-3 {
+    display: block;
+    height: 1.5vmin;
+    width: 100%;
+    transform-origin: left center;
+    animation: drawWidth 0.4s ease-out forwards;
+}
+
+.strike-row-1 {
+    top: 9vmin;
+    left: 0;
+}
+
+.strike-row-2 {
+    top: 29.25vmin;
+    left: 0;
+}
+
+.strike-row-3 {
+    top: 49.5vmin;
+    left: 0;
+}
+
+/* Vertical Columns (Animate Height) */
+.strike-col-1,
+.strike-col-2,
+.strike-col-3 {
+    display: block;
+    width: 1.5vmin;
+    height: 100%;
+    transform-origin: center top;
+    animation: drawHeight 0.4s ease-out forwards;
+}
+
+.strike-col-1 {
+    left: 9vmin;
+    top: 0;
+}
+
+.strike-col-2 {
+    left: 29.25vmin;
+    top: 0;
+}
+
+.strike-col-3 {
+    left: 49.5vmin;
+    top: 0;
+}
+
+.strike-diag-1,
+.strike-diag-2 {
+    display: block;
+    width: 141.4%;
+    height: 1.5vmin;
+    animation: drawWidth 0.4s ease-out forwards;
+}
+
+.strike-diag-1 {
+    top: 0;
+    left: 0;
+    transform-origin: top left;
+    rotate: 45deg;
+    /* Separate property: prevents animation override */
+}
+
+.strike-diag-2 {
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom left;
+    rotate: -45deg;
+}
+
+/* #playerturn {
+    font-size: 4vmin;
+    margin-top: 2vmin;
+    font-weight: bold;
+    color: #b06bfa;
+
+} */
+ #playerturn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #4c1d95;
+    border-radius: 30px;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 0 10px rgba(158, 80, 231, 0.4);
+    border:3px solid #5808b3;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    border: 2px solid #7900eaea;
+    background: #1a1a1a;
+    
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    gap: 4vmin;
+    margin-top: 2rem;
+}
+
+.score-card {
+    background: #1a1a1a;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    min-width: 150px;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    border: 2px solid #7900eaea;
+}
+
+.score-card h3 {
+    color: #ff3b3b;
+    margin-bottom: 10px;
+}
+
+.score-card span {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 3rem;
+    color: #e4e0e0;
+    font-size: 2vmin;
+}
