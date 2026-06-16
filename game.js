@@ -21,7 +21,7 @@ resetScore.addEventListener("click", () => {
   drawScore = 0;
   oScoreText.innerText = 0;
   xScoreText.innerText = 0;
-  drawScore.innerText = 0;
+  drawScoreText.innerText = 0;
 });
 const winPatterns = [
   { combo: [0, 1, 2], className: "strike-row-1" },
